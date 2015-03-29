@@ -1,6 +1,6 @@
 #![crate_name = "posix"]
 #![crate_type = "lib"]
-#![feature(core, path, std_misc)]
+#![feature(core)]
 #![allow(non_camel_case_types)]
 #![allow(raw_pointer_derive)]
 #![allow(non_snake_case)]
@@ -8,7 +8,7 @@
 
 use std::path::{Path};
 use std::ffi::{AsOsStr};
-use std::os::unix::{OsStrExt};
+use std::os::unix::ffi::{OsStrExt};
 
 pub use os::arch::{char_t, schar_t, uchar_t, short_t, ushort_t, int_t, uint_t, long_t};
 pub use os::arch::{ulong_t, longlong_t, ulonglong_t, float_t, double_t, size_t, ssize_t}; 
